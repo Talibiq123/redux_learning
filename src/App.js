@@ -1,11 +1,12 @@
-import './App.css';
+import React from "react"; 
+import PostDisplay from "./Components/PostDisplay";
 
-function App() {
-  return (
-    <div>
-    <p>Redux...</p>
-    </div>
-  );
+const App = () => {
+    return(
+        <div>
+            <PostDisplay />
+        </div>
+    )
 }
 
 export default App;

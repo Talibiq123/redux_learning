@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 // import {postFetching, postFetchSuccess, postFetchError} from "../redux/actions/postActions";
 import {fetchPost} from "../redux/actions/postActions";
 import {useDispatch, useSelector} from "react-redux";
-import axios from "axios";
+// import axios from "axios";
 
 const PostDisplay = () => {
     const {loading, data, error} = useSelector((state) => state);

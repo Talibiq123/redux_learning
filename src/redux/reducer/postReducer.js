@@ -1,4 +1,4 @@
-import { POST_FETCHING, POST_FETCHING_SUCCESS, POST_FETCHING_ERROR } from "../actions/actionTypes";
+import { POST_FETCHING, POST_FETCH_SUCCESS, POST_FETCH_ERROR } from "../actions/actionTypes";
 
 
 let initialState = {
@@ -7,21 +7,23 @@ let initialState = {
     error: null,
 }
 
-const postReducer = (state = initialState, action) => {
+ const postReducer = (state = initialState, action) => {
     switch(action.type) {
         case POST_FETCHING:
             return (
                 {...state, loading: true}
             )
         
-        case POST_FETCHING_SUCCESS: 
+        case POST_FETCH_SUCCESS: 
             return (
                 {...state, loading: false, data: action.payload, error: null}
             )
 
-        case POST_FETCHING_ERROR:
+        case POST_FETCH_ERROR:
             return (
                 {...state, loading: false, data: [], error: action.payload}
             )
     }
 }
+
+export default postReducer;
